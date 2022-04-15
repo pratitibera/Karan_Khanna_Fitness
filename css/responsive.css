@@ -1,0 +1,144 @@
+@media only screen and (min-width: 577px) {
+	nav {
+		padding-left: 250px!important;
+		padding-right: 75px!important;
+	}
+	.nav-link {
+		padding-left: 2.3rem!important;
+		padding-right: 2.3rem!important;
+	}
+	.home_img1 {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 90%;
+	}
+	.home_img2 {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 120%;
+	}
+	.home_consultation {
+		background-image: url('../img/home7.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 84vh;
+	}
+	.home_consultation .col-md-4 .fo-22 {
+		margin-left: -120px;
+		margin-right: 100px!important;
+	}
+	footer{
+		padding: 30px 250px;
+	}
+}
+
+@media only screen and (min-width: 1400px) {}
+
+@media only screen and (max-width: 576px) {
+	/* Global classes for mobile */
+	.mfo-35 {
+		font-size: 35px!important;
+	}
+	.mfo-32 {
+		font-size: 32px!important;
+	}
+	.mfo-30 {
+		font-size: 30px!important;
+	}
+	.mfo-28 {
+		font-size: 28px!important;
+	}
+	.mfo-25 {
+		font-size: 25px!important;
+	}
+	.mfo-24 {
+		font-size: 24px!important;
+	}
+	.mfo-22 {
+		font-size: 22px!important;
+	}
+	.mfo-20 {
+		font-size: 20px!important;
+	}
+	.mfo-18 {
+		font-size: 18px!important;
+	}
+	.mfo-17 {
+		font-size: 17px!important;
+	}
+	.mfo-16 {
+		font-size: 16px!important;
+	}
+	.mfo-15 {
+		font-size: 15px!important;
+	}
+	.mfo-14 {
+		font-size: 14px!important;
+	}
+	.mfo-13 {
+		font-size: 13px!important;
+	}
+	.mfo-12 {
+		font-size: 12px!important;
+	}
+	.mfo-11 {
+		font-size: 11px!important;
+	}
+	.mfo-10 {
+		font-size: 10px!important;
+	}
+	.mow-100 {
+		width: 100%!important;
+	}
+	.mow-65 {
+		width: 65%!important;
+	}
+	.mvh-100 {
+		height: 87vh!important;
+	}
+	.mvh-110 {
+		height: 110vh!important;
+	}
+	/* Custom classes */
+	.nav-link {
+		padding: 14px!important;
+	}
+	.home_img1 {
+		position: absolute;
+		bottom: 0;
+		right: -5%;
+		width: 90%;
+	}
+	.home_img2 {
+		position: absolute;
+		bottom: 0;
+		right: -5%;
+		width: 90%;
+	}
+	.home_programs {
+		height: 230vh;
+	}
+	.home_consultation {
+		background: #000;
+	}
+	.home_consultation img {
+		width: 40%;
+	}
+	.about_bar2 {
+		max-width: 225px;
+	}
+	.about_bar2::before {
+		left: -12.5%;
+		bottom: -15px;
+	}
+	.about_bar2::after {
+		right: -12.5%;
+		bottom: -15px;
+	}
+	footer{
+		padding: 15px;
+	}
+}
