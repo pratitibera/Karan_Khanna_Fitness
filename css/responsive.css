@@ -33,6 +33,20 @@
 	footer{
 		padding: 30px 250px;
 	}
+	.owl-dots{
+		position: absolute;
+		right: -20%;
+		top: 30%;
+	}
+	.owl-dots button{
+		width: 25px;
+		height: 25px;
+		background: transparent!important;
+		display: block;
+		margin-bottom: 28px;
+		border: 1px solid #FDFE02!important;
+		transform: rotate(45deg);
+	}
 }
 
 @media only screen and (max-width: 991px) {
@@ -139,6 +153,22 @@
 	footer{
 		padding: 15px;
 	}
+	.owl-dots{
+		position: absolute;
+		right: 10%;
+		left: 10%;
+		bottom: -10%;
+		display: flex;
+		justify-content: space-evenly;
+		padding: 0px 170px;
+	}
+	.owl-dots button{
+		width: 25px;
+		height: 25px;
+		background: transparent!important;
+		border: 1px solid #FDFE02!important;
+		transform: rotate(45deg);
+	}
 }
 
 @media only screen and (max-width: 556px){
@@ -156,5 +186,8 @@
 	}
 	.mvh-110 {
 		height: 110vh!important;
+	}
+	.owl-dots{
+		padding: 0;
 	}
 }

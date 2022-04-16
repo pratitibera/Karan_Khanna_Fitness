@@ -16,3 +16,21 @@ $(".card-header").click(function(){
   $(".card-header").removeClass("active");
   $(this).addClass("active");
 });
+
+$('#about_carousel').owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoPlaySpeed: 1000,
+    autoplayHoverPause: true,
+    dots: true,
+    nav: false,
+    // navText: [$('.owl-navigation .owl-nav-prev'), $('.owl-navigation .owl-nav-next')],
+    responsive: {
+        0: {
+            items: 1
+        },
+        960: {
+            items: 1
+        }
+    }
+});

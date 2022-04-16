@@ -466,3 +466,6 @@ footer input {
 	opacity: .6;
 	font-size: 16px;
 }
+.owl-dots button.active{
+	background: #FDFE02!important;
+}
