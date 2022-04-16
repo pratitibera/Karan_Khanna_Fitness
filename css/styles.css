@@ -256,6 +256,7 @@ ul {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	height: 125vh;
 }
 
 .home_fitness {
@@ -420,7 +421,9 @@ footer input {
 #accordion .card .card-header {
 	border: none;
 }
-
+#accordion .card-header.active{
+	background-color: #FDFE02;
+}
 #accordion .card a {
 	color: #000000;
 	font-size: 16px;

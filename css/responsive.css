@@ -1,4 +1,4 @@
-@media only screen and (min-width: 577px) {
+@media only screen and (min-width: 992px) {
 	nav {
 		padding-left: 250px!important;
 		padding-right: 75px!important;
@@ -26,7 +26,7 @@
 		background-repeat: no-repeat;
 		height: 84vh;
 	}
-	.home_consultation .col-md-4 .fo-22 {
+	.home_consultation .col-md-3 .fo-22 {
 		margin-left: -120px;
 		margin-right: 100px!important;
 	}
@@ -35,9 +35,7 @@
 	}
 }
 
-@media only screen and (min-width: 1400px) {}
-
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 991px) {
 	/* Global classes for mobile */
 	.mfo-35 {
 		font-size: 35px!important;
@@ -97,10 +95,10 @@
 		width: 65%!important;
 	}
 	.mvh-100 {
-		height: 87vh!important;
+		height: 51vh!important;
 	}
 	.mvh-110 {
-		height: 110vh!important;
+		height: 75vh!important;
 	}
 	/* Custom classes */
 	.nav-link {
@@ -109,17 +107,17 @@
 	.home_img1 {
 		position: absolute;
 		bottom: 0;
-		right: -5%;
+		right: 5%;
 		width: 90%;
 	}
 	.home_img2 {
 		position: absolute;
 		bottom: 0;
-		right: -5%;
+		right: 0%;
 		width: 90%;
 	}
 	.home_programs {
-		height: 230vh;
+		height: 105vh;
 	}
 	.home_consultation {
 		background: #000;
@@ -140,5 +138,23 @@
 	}
 	footer{
 		padding: 15px;
+	}
+}
+
+@media only screen and (max-width: 556px){
+	.mvh-100 {
+		height: 87vh!important;
+	}
+	.home_img1 {
+		position: absolute;
+		bottom: 0;
+		right: -5%;
+		width: 90%;
+	}
+	.home_programs {
+		height: 230vh;
+	}
+	.mvh-110 {
+		height: 110vh!important;
 	}
 }

@@ -10,3 +10,9 @@ menuBtn.addEventListener('click', () => {
         menuOpen = false;
     }
 });
+
+
+$(".card-header").click(function(){
+  $(".card-header").removeClass("active");
+  $(this).addClass("active");
+});
