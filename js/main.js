@@ -34,3 +34,7 @@ $('#about_carousel').owlCarousel({
         }
     }
 });
+
+function enroll(id){
+    $("#enrollment_modal").modal();
+}

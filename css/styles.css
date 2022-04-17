@@ -407,7 +407,10 @@ footer input {
 	color: #717171;
 	font-size: 13px;
 }
-
+.consultancy_form .w-47{
+	width: 47%;
+	margin-right: 2%;
+}
 .consultancy_form input::placeholder {
 	font-size: 13px;
 	color: #717171;
@@ -424,6 +427,9 @@ footer input {
 	height: 170px;
 	resize: none;
 	font-size: 13px;
+}
+.modal .consultancy_form textarea{
+	height: 100px;
 }
 .consultancy_form .btn{
 	background: #FDFE02;
@@ -455,7 +461,7 @@ footer input {
 	color: #000000;
 }
 .services_card{
-	height: 650px;
+	height: 720px;
 	border-radius: 5px;
 }
 .card_tag{
@@ -491,4 +497,12 @@ footer input {
 }
 .disc_points, .services_card ul{
 	list-style: disc;
+}
+.modal .close{
+	right: 15px;
+	top: 5px;
+	color: #fff;
+	position: absolute;
+	font-size: 50px;
+	font-weight: 500;
 }
