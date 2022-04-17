@@ -469,3 +469,6 @@ footer input {
 .owl-dots button.active{
 	background: #FDFE02!important;
 }
+.disc_points{
+	list-style: disc;
+}
