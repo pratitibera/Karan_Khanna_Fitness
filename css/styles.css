@@ -455,14 +455,14 @@ footer input {
 	color: #000000;
 }
 .services_card{
-	height: 330px;
+	height: 650px;
 	border-radius: 5px;
 }
 .card_tag{
 	background: #FDFE02;
 	text-align: center;
 	color: #000000;
-	font-size: 16px;
+	font-size: 17px;
 	font-weight: 800;
 	padding: 10px 15px;
 	width: 70%;
@@ -489,6 +489,6 @@ footer input {
 .owl-dots button.active{
 	background: #FDFE02!important;
 }
-.disc_points{
+.disc_points, .services_card ul{
 	list-style: disc;
 }
