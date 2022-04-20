@@ -236,10 +236,52 @@ ul {
 	transform: rotate(-45deg) translate(35px, 35px);
 }
 
+/* floating notifications */
+
+#notification-area {
+  position: fixed;
+  bottom: 30px;
+  z-index: 999999;
+  right: 10px;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#notification-area .notification {
+  position: relative;
+  padding: 15px 10px;
+  background: #FDFE02;
+  color: #000000;
+  font-size: 19px;
+  font-weight: 800;
+  border-radius: 5px;
+  margin: 5px 0px;
+  opacity: 0;
+  left: 20px;
+  animation: showNotification 500ms ease-in-out forwards;
+}
+
+@keyframes showNotification {
+  to {
+    opacity: 1;
+    left: 0px;
+  }
+}
+
 .text-yellow {
 	color: #FDFE02;
 }
-
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
 .nav-link {
 	color: #fff!important;
 	font-size: 14px;

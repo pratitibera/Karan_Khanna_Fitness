@@ -173,11 +173,11 @@
             <div class="p-3 p-md-5">
                <div class="fo-30 text-center fw-600 text-yellow mb-4 mt-4 mt-md-0">Connect Now</div>
                <div class="consultancy_form m-auto w-50 mow-100">
-                  <input type="text" name="" class="" placeholder="Enter Name*">
-                  <input type="text" name="" class="" placeholder="Enter Email*">
-                  <input type="text" name="" class="" placeholder="Enter Phone Number*">
-                  <textarea placeholder="Enter Message*"></textarea>
-                  <button class="btn mt-2">Send</button>
+                  <input type="text" placeholder="Enter Name*" id="connect_name">
+                  <input type="text" placeholder="Enter Email*" id="connect_email">
+                  <input type="number" oninput="this.value = this.value.slice(0,10);" placeholder="Enter Phone Number*" id="connect_mobile">
+                  <textarea placeholder="Enter Message*" id="connect_message"></textarea>
+                  <button class="btn mt-2" onclick="connectNow();">Send</button>
                </div>
             </div>
          </div>
@@ -227,17 +227,17 @@
                      <div class="col-md-8">
                         <div class="fo-30 fw-600 text-yellow mb-4 mt-4 mt-md-0">Enrollment Form</div>
                         <div class="consultancy_form m-auto">
-                           <input type="text" name="" class="" placeholder="Enter Name*">
-                           <input type="text" name="" class="" placeholder="Enter Email*">
-                           <input type="text" name="" class="" placeholder="Enter Phone Number*">
+                           <input type="text" placeholder="Enter Name*" id="enrollment_name">
+                           <input type="text" placeholder="Enter Email*" id="enrollment_email">
+                           <input type="number" oninput="this.value = this.value.slice(0,10);" placeholder="Enter Phone Number*" id="enrollment_mobile">
                            <!-- <input type="text" name="" class="w-47" placeholder="Enter Phone Number*">
                            <input type="text" name="" class="w-50" placeholder="Enter Plan (1/2/3/Kids)*"> -->
-                           <textarea placeholder="Enter Address*"></textarea>
-                           <input type="text" name="" class="w-47" placeholder="Enter Current Weight (Kg)*">
-                           <input type="text" name="" class="w-50" placeholder="Enter Goal Weight (Kg)">
-                           <input type="text" name="" class="w-47" placeholder="Enter Height (Feet/Inches)*">
-                           <input type="text" name="" class="w-50" placeholder="Enter Age*">
-                           <button class="btn mt-2">Submit</button>
+                           <textarea placeholder="Enter Address*" id="enrollment_address"></textarea>
+                           <input type="number" oninput="this.value = this.value.slice(0,3);" class="w-47" placeholder="Enter Current Weight (Kg)*" id="enrollment_cweight">
+                           <input type="number" oninput="this.value = this.value.slice(0,3);" class="w-50" placeholder="Enter Goal Weight (Kg)" id="enrollment_gweight">
+                           <input type="number" oninput="this.value = this.value.slice(0,3);" class="w-47" placeholder="Enter Height (cm)*" id="enrollment_height">
+                           <input type="number" oninput="this.value = this.value.slice(0,2);" class="w-50" placeholder="Enter Age*" id="enrollment_age">
+                           <button class="btn mt-2" onclick="submitEnrollment()">Submit</button>
                         </div>
                      </div>
                      <div class="col-md-4 mt-3 m-md-auto">
@@ -252,6 +252,7 @@
       <script src="js/jquery.js"></script>
       <script src="js/bootstrap.min.js"></script>
       <script src="js/owl.carousel.min.js"></script>
+      <script src="js/urls.js" defer></script>
       <script src="js/main.js"></script>
    </body>
 </html>

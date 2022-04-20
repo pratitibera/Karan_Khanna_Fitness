@@ -121,6 +121,10 @@
 		height: 75vh!important;
 	}
 	/* Custom classes */
+	#notification-area .notification {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
 	.nav-link {
 		padding: 14px!important;
 	}
