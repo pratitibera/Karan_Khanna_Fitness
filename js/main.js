@@ -136,8 +136,8 @@ function submitEnrollment() {
     var enrollment_height = document.getElementById('enrollment_height').value;
     var enrollment_age = document.getElementById('enrollment_age').value;
     if(enrollment_name != "" && enrollment_email != "" && enrollment_mobile != "" && enrollment_address != "" && enrollment_cweight != "" && enrollment_gweight != "" && enrollment_height != "" && enrollment_age != ""){
-        if(isPhoneNumber(connect_mobile) == true){
-            if(validEmail(connect_email) == true){
+        if(isPhoneNumber(enrollment_mobile) == true){
+            if(validEmail(enrollment_email) == true){
                 var json = {
                   "name": enrollment_name,
                   "email": enrollment_email,
@@ -150,15 +150,15 @@ function submitEnrollment() {
                   "age": parseInt(enrollment_age),
                   "status": "",
                   "offer": "string",
-                  "price": 0,
+                  "price": parseInt(plan_id),
                   "razorpay_payment_id": "",
                   "razorpay_order_id": "",
                   "razorpay_signature": ""
                 }
-                // var request = new XMLHttpRequest();
-                // request.open(urlSet.create_order.method, urlSet.create_order.url, true);
-                // request.setRequestHeader("Content-Type", "application/json");
-                // request.send(JSON.stringify(json));
+                var request = new XMLHttpRequest();
+                request.open(urlSet.create_order.method, urlSet.create_order.url, true);
+                request.setRequestHeader("Content-Type", "application/json");
+                request.send(JSON.stringify(json));
                 request.onload = function () {
                     var data = JSON.parse(this.response);
                     console.log(data);

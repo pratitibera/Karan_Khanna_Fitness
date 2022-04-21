@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>KARAN KHANNA</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+      <style>
+         #contact_requests{
+            padding-top: 80px;
+         }
+      </style>
+   </head>
+   <body onload="checkLoginStatus2();">
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+         <a class="navbar-brand" href="index.html">
+         <img src="img/logo.png">
+         </a>
+         <div class="menu-btn navbar-toggler-icon d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <div class="menu-btn__burger"></div>
+         </div>
+         <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav justify-content-end">
+               <li class="nav-item">
+                  <a class="nav-link" href="#contact_requests">CONTACT REQUESTS</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#transactions">TRANSACTIONS</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+
+      <section class="container" id="contact_requests">
+         <div class="text-center fo-30 fw-700 mt-5">CONTACT REQUESTS</div>
+         <div class="table-responsive mt-5">
+            <table class="table table-bordered">
+               <thead>
+                  <tr>
+                     <th>SERIAL NO.</th>
+                     <th>FULL NAME</th>
+                     <th>MOBILE NUMBER</th>
+                     <th>EMAIL ID</th>
+                     <th>MESSAGE</th>
+                     <th></th>
+                  </tr>
+               </thead>
+               <tbody id="contact_table"></tbody>
+            </table>
+         </div>
+      </section>
+
+      <section class="container" id="transactions">
+         <div class="text-center fo-30 fw-700 mt-5">TRANSACTIONS</div>
+         <div class="table-responsive mt-5">
+            <table class="table table-bordered">
+               <thead>
+                  <tr>
+                     <th>SERIAL NO.</th>
+                     <th>FULL NAME</th>
+                     <th>MOBILE NUMBER</th>
+                     <th>EMAIL ID</th>
+                     <th>ADDRESS</th>
+                     <th>AGE</th>
+                     <th>HEIGHT (in cm)</th>
+                     <th>CURRENT WEIGHT (in Kg)</th>
+                     <th>GOAL WEIGHT (in Kg)</th>
+                     <th>PACKAGE</th>
+                     <th></th>
+                  </tr>
+               </thead>
+               <tbody id="transactions_table"></tbody>
+            </table>
+         </div>
+      </section>
+      <!--Script files -->
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/urls.js" defer></script>
+      <script src="js/main.js"></script>
+      <script src="js/admin.js"></script>
+   </body>
+</html>

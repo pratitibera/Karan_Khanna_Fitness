@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>KARAN KHANNA</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+      <style>
+         .w-8{
+             width: 8%;
+         }
+         .w-92{
+             width: 92%;
+         }
+      </style>
+   </head>
+   <body onload="checkLoginStatus1();">
+      <div class="container" style="padding: 100px 250px">
+         <h2>LOGIN</h2>
+         <div class="form-group mt-5">
+            <label>Username:</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter username">
+         </div>
+         <div class="form-group">
+            <label>Password:</label>
+            <div class="d-flex">
+               <input type="password" class="form-control w-92" id="password" placeholder="Enter password">
+               <div class="form-control w-8" style="border-left: none; cursor: pointer;" onclick="showPassword()">
+                  <i class="fas fa-eye"></i>
+               </div>
+            </div>
+         </div>
+         <button type="button" class="btn btn-primary mt-4" onclick="signin();">Submit</button>
+      </div>
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/urls.js" defer></script>
+      <script src="js/admin.js"></script>
+   </body>
+</html>
