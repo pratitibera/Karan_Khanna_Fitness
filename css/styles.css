@@ -3,6 +3,7 @@
 /* Global classes */
 td, th{
 	text-align: center;
+	font-size: 13px;
 }
 .btn:focus,
 .btn:active {
@@ -195,7 +196,7 @@ ul {
 .menu-btn__burger {
 	width: 25px;
 	height: 3px;
-	background: #FFC000;
+	background: #FDFE02;
 	border-radius: 5px;
 	box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
 	transition: all .5s ease-in-out;
@@ -207,7 +208,7 @@ ul {
 	position: absolute;
 	width: 25px;
 	height: 3px;
-	background: #FFC000;
+	background: #FDFE02;
 	border-radius: 5px;
 	box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
 	transition: all .5s ease-in-out;

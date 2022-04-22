@@ -1,0 +1,30 @@
+[
+	{
+		"offer_name": "Pack One",
+		"price": 7590,
+		"months": "1 Month",
+		"weeks": 4,
+		"features": ["Personalised Nutrition Plan with calories and macronutrient split", "Personalised Training Routine (Home/Gym Based)", "Mobility Routine", "Cardio Protocol", "Personalised Supplementation Recommendation", "Bi-weekly check-ins  to discuss client experience", "feedback", "and implement changes (if required)", "Unlimited Changes", "24/7 Online Support via WhatsApp", "Stress Management Support", "4 live video classes (one hour each) for progress tracking and monitoring."]	
+	},
+	{
+		"offer_name": "Pack Two",
+		"price": 14990,
+		"months": "3 Months",
+		"weeks": 12,
+		"features": ["Personalised Nutrition Plan with calories and macronutrient split", "Personalised Training Routine (Home/Gym Based)", "Mobility Routine", "Cardio Protocol", "Personalised Supplementation Recommendation", "Bi-weekly check-ins  to discuss client experience", "feedback", "and implement changes (if required)", "Unlimited Changes", "24/7 Online Support via WhatsApp", "Stress Management Support", "4 live video classes (one hour each) for progress tracking and monitoring."]	
+	},
+	{
+		"offer_name": "Pack Three",
+		"price": 30990,
+		"months": "6 Months",
+		"weeks": 24,
+		"features": ["Personalised Nutrition Plan with calories and macronutrient split", "Personalised Training Routine (Home/Gym Based)", "Mobility Routine", "Cardio Protocol", "Personalised Supplementation Recommendation", "Bi-weekly check-ins  to discuss client experience", "feedback", "and implement changes (if required)", "Unlimited Changes", "24/7 Online Support via WhatsApp", "Stress Management Support", "4 live video classes (one hour each) for progress tracking and monitoring."]	
+	},
+	{
+		"offer_name": "Kid's Pack",
+		"price": 8999,
+		"months": "3 Live Class a week Nutrition",
+		"weeks": 24,
+		"features": ["Personalised Nutrition Plan with calories and macronutrient split", "Personalised Training Routine (Home/Gym Based)", "Mobility Routine", "Cardio Protocol", "Personalised Supplementation Recommendation", "Bi-weekly check-ins  to discuss client experience", "feedback", "and implement changes (if required)", "Unlimited Changes", "24/7 Online Support via WhatsApp", "Stress Management Support", "4 live video classes (one hour each) for progress tracking and monitoring."]	
+	}
+]

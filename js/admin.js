@@ -63,14 +63,14 @@ function displayContacts() {
         console.log(data);
         document.getElementById('contact_table').innerHTML = "";
         if(data.message == "Message Found"){
-        	for(i = 0; i < data['data'].length; i++){
+        	for(i = 0; i < data['data']['rows'].length; i++){
         		document.getElementById('contact_table').innerHTML += `<tr>
                      <td>${i+1}</td>
-                     <td>${data['data'][i]['name']}</td>
-                     <td>${data['data'][i]['phone']}</td>
-                     <td>${data['data'][i]['email']}</td>
-                     <td>${data['data'][i]['message']}</td>
-                     <td><button class="btn btn-dark" id="contact_${data['data'][i]['id']}" onclick="deleteContact(this.id);">DELETE</button></td>
+                     <td>${data['data']['rows'][i]['name']}</td>
+                     <td>${data['data']['rows'][i]['phone']}</td>
+                     <td>${data['data']['rows'][i]['email']}</td>
+                     <td>${data['data']['rows'][i]['message']}</td>
+                     <td><button class="btn btn-dark" id="contact_${data['data']['rows'][i]['id']}" onclick="deleteContact(this.id);">DELETE</button></td>
                   </tr>`;
         	}
         }
@@ -110,26 +110,26 @@ function displayTransactions(){
         var data = JSON.parse(this.response);
         console.log(data);
         document.getElementById('transactions_table').innerHTML = "";
-        if(data['data'].length > 0){
-        	for(i = 0; i < data['data'].length; i++){
+        if(data['data']['rows'].length > 0){
+        	for(i = 0; i < data['data']['rows'].length; i++){
         		document.getElementById('transactions_table').innerHTML += `<tr>
                      <td>${i+1}</td>
-                     <td>${data['data'][i]['name']}</td>
-                     <td>${data['data'][i]['phone']}</td>
-                     <td>${data['data'][i]['email']}</td>
-                     <td>${data['data'][i]['address']}</td>
-                     <td>${data['data'][i]['age']}</td>
-                     <td>${data['data'][i]['height']} cm</td>
-                     <td>${data['data'][i]['current_weight']} Kg</td>
-                     <td>${data['data'][i]['goal_weight']} Kg</td>
-                     <td>Rs. ${data['data'][i]['price']}</td>
-                     <td><button class="btn btn-dark" id="transaction_${data['data'][i]['id']}" onclick="deleteTransaction(this.id);">DELETE</button></td>
+                     <td>${data['data']['rows'][i]['name']}</td>
+                     <td>${data['data']['rows'][i]['phone']}</td>
+                     <td>${data['data']['rows'][i]['email']}</td>
+                     <td>${data['data']['rows'][i]['address']}</td>
+                     <td>${data['data']['rows'][i]['age']}</td>
+                     <td>${data['data']['rows'][i]['height']} cm</td>
+                     <td>${data['data']['rows'][i]['current_weight']} Kg</td>
+                     <td>${data['data']['rows'][i]['goal_weight']} Kg</td>
+                     <td>Rs. ${data['data']['rows'][i]['price']}</td>
+                     <td><button class="btn btn-dark" id="transaction_${data['data']['rows'][i]['id']}" onclick="deleteTransaction(this.id);">DELETE</button></td>
                   </tr>`;
         	}
         }
         else{
         	document.getElementById('transactions_table').innerHTML = `<tr>
-                     <td colspan="5" class="text-center fo-16 fw-600">No transactions found</td>
+                     <td colspan="11" class="text-center fo-16 fw-600">No transactions found</td>
                   </tr>`;
         }
     }
