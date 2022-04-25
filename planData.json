@@ -1,3 +1,9 @@
+// Add offers
+// Create payment request
+// Trigger razorpay and verify
+// email
+
+
 [
 	{
 		"offer_name": "Pack One",

@@ -167,9 +167,9 @@ function submitEnrollment() {
                     //         "key": "rzp_test_I4CcsfzCypIJie",
                     //         "amount": data['amount'],
                     //         "currency": "INR",
-                    //         "name": "ALAN VIDYUSH BAPTIST",
-                    //         "description": "Pay For Your Service",
-                    //         "image": "https://alanvidyushbaptist.com/assets/logo/Optimal_Wellness_Logo.png",
+                    //         "name": "KARAN KHANNA FITNESS",
+                    //         "description": "A simple gateway to a fitter you",
+                    //         "image": "http://karankhannaofficial.com/img/about_logo.png",
                     //         "order_id": data['order_id'],
                     //         "handler": function (response) {
                     //             payNowResponse(response.razorpay_payment_id, response.razorpay_order_id, response.razorpay_signature, data['receipt_id']);
@@ -184,7 +184,7 @@ function submitEnrollment() {
                     //             "address": "Give an address here",
                     //         },
                     //         "theme": {
-                    //             "color": "#8b1ef1"
+                    //             "color": "#000000"
                     //         }
                     //     };
                     //     var rzp1 = new Razorpay(options);
