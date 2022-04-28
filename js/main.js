@@ -213,6 +213,7 @@ function submitEnrollment() {
 
 
 function payNowResponse(razorpay_payment_id, razorpay_order_id, razorpay_signature, receipt_id) {
+    startLoader();
     var json = {
         "razorpay_order_id": razorpay_order_id,
         "razorpay_signature": razorpay_signature,
