@@ -10,8 +10,13 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+      <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
    </head>
-   <body>
+   <body onload="stopLoader();">
+      <div id="preloader">
+         <div class="loader" id="loader"></div>
+      </div>
+      <div id="overlay"></div>
       <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
          <a class="navbar-brand" href="index.html">
          <img src="img/logo.png">
@@ -75,7 +80,7 @@
                         <div class="card_tag">PACK ONE</div>
                         <div class="card_tag_bottom"></div>
                         <div class="fo-44 fw-700 text-center mt-2">Rs. 7,590</div>
-                        <button class="btn website_btn mt-3" id="7590" onclick="enroll(this.id);">ENROLL</button>
+                        <button class="btn website_btn mt-3" id="PACK ONE" onclick="enroll(this.id);">ENROLL</button>
                         <div class="fo-20 fw-700 mt-3 text-center">1 <span>Month</span></div>
                         <div class="fo-20 fw-700 mt-2 text-center">4 <span>Weeks</span></div>
                         <div class="mt-3 p-3 fo-13">
@@ -99,7 +104,7 @@
                         <div class="card_tag">PACK TWO</div>
                         <div class="card_tag_bottom"></div>
                         <div class="fo-44 fw-700 text-center mt-2">Rs. 14,990</div>
-                        <button class="btn website_btn mt-3" id="14990" onclick="enroll(this.id);">ENROLL</button>
+                        <button class="btn website_btn mt-3" id="PACK TWO" onclick="enroll(this.id);">ENROLL</button>
                         <div class="fo-20 fw-700 mt-3 text-center">3 <span>Months</span></div>
                         <div class="fo-20 fw-700 mt-2 text-center">12 <span>Weeks</span></div>
                         <div class="mt-3 p-3 fo-13">
@@ -123,7 +128,7 @@
                         <div class="card_tag">PACK THREE</div>
                         <div class="card_tag_bottom"></div>
                         <div class="fo-44 fw-700 text-center mt-2">Rs. 30,990</div>
-                        <button class="btn website_btn mt-3" id="30990" onclick="enroll(this.id);">ENROLL</button>
+                        <button class="btn website_btn mt-3" id="PACK THREE" onclick="enroll(this.id);">ENROLL</button>
                         <div class="fo-20 fw-700 mt-3 text-center">6 <span>Months</span></div>
                         <div class="fo-20 fw-700 mt-2 text-center">24 <span>Weeks</span></div>
                         <div class="mt-3 p-3 fo-13">
@@ -148,7 +153,7 @@
                         <div class="card_tag">KID’S PACK</div>
                         <div class="card_tag_bottom"></div>
                         <div class="fo-44 fw-700 text-center mt-2">Rs. 8,999</div>
-                        <button class="btn website_btn mt-3" id="8999" onclick="enroll(this.id);">ENROLL</button>
+                        <button class="btn website_btn mt-3" id="KID'S PACK" onclick="enroll(this.id);">ENROLL</button>
                         <div class="fo-20 fw-700 mt-3 text-center">3 <span>Live Class a week <br>Nutrition</span></div>
                         <div class="fo-20 fw-700 mt-2 text-center">24 <span>Weeks</span></div>
                         <div class="mt-3 p-3 fo-13">
@@ -233,11 +238,11 @@
                            <!-- <input type="text" name="" class="w-47" placeholder="Enter Phone Number*">
                            <input type="text" name="" class="w-50" placeholder="Enter Plan (1/2/3/Kids)*"> -->
                            <textarea placeholder="Enter Address*" id="enrollment_address"></textarea>
-                           <input type="number" oninput="this.value = this.value.slice(0,3);" class="w-47" placeholder="Enter Current Weight (Kg)*" id="enrollment_cweight">
-                           <input type="number" oninput="this.value = this.value.slice(0,3);" class="w-50" placeholder="Enter Goal Weight (Kg)" id="enrollment_gweight">
-                           <input type="number" oninput="this.value = this.value.slice(0,3);" class="w-47" placeholder="Enter Height (cm)*" id="enrollment_height">
-                           <input type="number" oninput="this.value = this.value.slice(0,2);" class="w-50" placeholder="Enter Age*" id="enrollment_age">
-                           <button class="btn mt-2" onclick="submitEnrollment()">Submit</button>
+                           <input type="number" oninput="this.value = this.value.slice(0,3);" class="w-47 mow-100" placeholder="Enter Current Weight (Kg)*" id="enrollment_cweight">
+                           <input type="number" oninput="this.value = this.value.slice(0,3);" class="w-50 mow-100" placeholder="Enter Goal Weight (Kg)" id="enrollment_gweight">
+                           <input type="number" oninput="this.value = this.value.slice(0,3);" class="w-47 mow-100" placeholder="Enter Height (cm)*" id="enrollment_height">
+                           <input type="number" oninput="this.value = this.value.slice(0,2);" class="w-50 mow-100" placeholder="Enter Age*" id="enrollment_age">
+                           <button class="btn mt-4 mt-md-2" onclick="submitEnrollment()">Submit</button>
                         </div>
                      </div>
                      <div class="col-md-4 mt-3 m-md-auto">

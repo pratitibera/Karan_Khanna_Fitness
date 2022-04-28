@@ -11,6 +11,16 @@ menuBtn.addEventListener('click', () => {
     }
 });
 
+function startLoader() {
+    document.getElementById("preloader").style.display = "block";
+    document.getElementById("loader").style.display = "block";
+}
+
+function stopLoader() {
+    $(".loader").fadeOut();
+    $("#preloader").delay(2000).fadeOut("slow");
+    document.getElementById("preloader").style.display = "none";
+}
 
 $(".card-header").click(function(){
   $(".card-header").removeClass("active");
@@ -138,22 +148,17 @@ function submitEnrollment() {
     if(enrollment_name != "" && enrollment_email != "" && enrollment_mobile != "" && enrollment_address != "" && enrollment_cweight != "" && enrollment_gweight != "" && enrollment_height != "" && enrollment_age != ""){
         if(isPhoneNumber(enrollment_mobile) == true){
             if(validEmail(enrollment_email) == true){
+                startLoader();
                 var json = {
                   "name": enrollment_name,
                   "email": enrollment_email,
-                  "id": 0,
                   "address": enrollment_address,
                   "phone": enrollment_mobile,
                   "height": parseInt(enrollment_height),
                   "goal_weight": parseInt(enrollment_gweight),
                   "current_weight": parseInt(enrollment_cweight),
                   "age": parseInt(enrollment_age),
-                  "status": "",
-                  "offer": "string",
-                  "price": parseInt(plan_id),
-                  "razorpay_payment_id": "",
-                  "razorpay_order_id": "",
-                  "razorpay_signature": ""
+                  "offer": plan_id
                 }
                 var request = new XMLHttpRequest();
                 request.open(urlSet.create_order.method, urlSet.create_order.url, true);
@@ -162,38 +167,35 @@ function submitEnrollment() {
                 request.onload = function () {
                     var data = JSON.parse(this.response);
                     console.log(data);
-                    // if (data['receipt_id'] != "") {
-                    //     var options = {
-                    //         "key": "rzp_test_I4CcsfzCypIJie",
-                    //         "amount": data['amount'],
-                    //         "currency": "INR",
-                    //         "name": "KARAN KHANNA FITNESS",
-                    //         "description": "A simple gateway to a fitter you",
-                    //         "image": "http://karankhannaofficial.com/img/about_logo.png",
-                    //         "order_id": data['order_id'],
-                    //         "handler": function (response) {
-                    //             payNowResponse(response.razorpay_payment_id, response.razorpay_order_id, response.razorpay_signature, data['receipt_id']);
-                    //             console.log(response);
-                    //         },
-                    //         "prefill": {
-                    //             "name": customer_name,
-                    //             "email": customer_email,
-                    //             "contact": customer_mobile
-                    //         },
-                    //         "notes": {
-                    //             "address": "Give an address here",
-                    //         },
-                    //         "theme": {
-                    //             "color": "#000000"
-                    //         }
-                    //     };
-                    //     var rzp1 = new Razorpay(options);
-                    //     rzp1.on('payment.failed', function (response) {
-                    //         notify("Sorry! Payment failed due to banks issue");
-                    //     });
-                    //     rzp1.open();
-
-                    // }
+                    if (data['receipt_id'] != "") {
+                        stopLoader();
+                        var options = {
+                            "key": "rzp_test_I4CcsfzCypIJie",
+                            "amount": data['amount'],
+                            "currency": "INR",
+                            "name": "KARAN KHANNA FITNESS",
+                            "description": "A simple gateway to a fitter you",
+                            "image": "http://karankhannaofficial.com/img/yellow_logo.png",
+                            "order_id": data['order_id'],
+                            "handler": function (response) {
+                                payNowResponse(response.razorpay_payment_id, response.razorpay_order_id, response.razorpay_signature, data['receipt_id']);
+                                console.log(response);
+                            },
+                            "prefill": {
+                                "name": enrollment_name,
+                                "email": enrollment_email,
+                                "contact": enrollment_mobile
+                            },
+                            "theme": {
+                                "color": "#000000"
+                            }
+                        };
+                        var rzp1 = new Razorpay(options);
+                        rzp1.on('payment.failed', function (response) {
+                            notify("Sorry! Payment failed due to banks issue");
+                        });
+                        rzp1.open();
+                    }
                 }
             }
             else{
