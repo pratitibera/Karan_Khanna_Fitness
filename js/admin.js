@@ -62,7 +62,7 @@ function displayContacts() {
         var data = JSON.parse(this.response);
         console.log(data);
         document.getElementById('contact_table').innerHTML = "";
-        if(data.message == "Message Found"){
+        if(data.data.count > 0){
         	for(i = 0; i < data['data']['rows'].length; i++){
         		document.getElementById('contact_table').innerHTML += `<tr>
                      <td>${i+1}</td>
@@ -76,7 +76,7 @@ function displayContacts() {
         }
         else{
         	document.getElementById('contact_table').innerHTML = `<tr>
-                     <td colspan="5" class="text-center fo-16 fw-600">No contact requests found</td>
+                     <td colspan="6" class="text-center fo-16 fw-600">No contact requests found</td>
                   </tr>`;
         }
     }
@@ -110,8 +110,14 @@ function displayTransactions(){
         var data = JSON.parse(this.response);
         console.log(data);
         document.getElementById('transactions_table').innerHTML = "";
-        if(data['data']['rows'].length > 0){
+        if(data.data.count > 0){
         	for(i = 0; i < data['data']['rows'].length; i++){
+                if(data['data']['rows'][i]['status'] == 'S'){
+                    var status = `<p class="text-success fw-800">Successful</p>`;
+                }
+                else{
+                    var status = `<p class="text-danger fw-800">Pending</p>`;
+                }
         		document.getElementById('transactions_table').innerHTML += `<tr>
                      <td>${i+1}</td>
                      <td>${data['data']['rows'][i]['name']}</td>
@@ -122,6 +128,7 @@ function displayTransactions(){
                      <td>${data['data']['rows'][i]['height']} cm</td>
                      <td>${data['data']['rows'][i]['current_weight']} Kg</td>
                      <td>${data['data']['rows'][i]['goal_weight']} Kg</td>
+                     <td>${status}</td>
                      <td>Rs. ${data['data']['rows'][i]['price']}</td>
                      <td><button class="btn btn-dark" id="transaction_${data['data']['rows'][i]['id']}" onclick="deleteTransaction(this.id);">DELETE</button></td>
                   </tr>`;
@@ -144,12 +151,12 @@ function deleteTransaction(id){
     request.onload = function () {
         var data = JSON.parse(this.response);
         console.log(data);
-        // if(data.message == "contact Deleted"){
-        // 	alert("Contact Deleted");
-        // 	displayContacts();
-        // }
-        // else{
-        // 	alert("Sorry! Could not delete contact");
-        // }
+        if(data.message == "Transaction Deleted"){
+        	alert("Transaction Deleted");
+        	displayTransactions();
+        }
+        else{
+        	alert("Sorry! Could not delete transaction");
+        }
     }
 }

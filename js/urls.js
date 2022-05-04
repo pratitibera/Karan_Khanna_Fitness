@@ -23,7 +23,7 @@ var urlSet = {
     },
     verify_payment: { // Verify payment
         url: baseUrl + "/api/v1/payment/verifyPayment", 
-        method: "POST",
+        method: "PATCH",
     },
 
 
@@ -33,7 +33,7 @@ var urlSet = {
         method: "GET",
     },
     delete_transactions: { // Delete one transaction
-        url: baseUrl + "/api/v1/transactions", 
+        url: baseUrl + "/api/v1/transactions/", 
         method: "DELETE",
     },
 

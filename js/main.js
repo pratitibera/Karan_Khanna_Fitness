@@ -101,6 +101,7 @@ function connectNow(){
     if(connect_name != "" && connect_email != "" && connect_mobile != "" && connect_message != ""){
         if(isPhoneNumber(connect_mobile) == true){
             if(validEmail(connect_email) == true){
+                startLoader();
                 var json = {
                   "name": connect_name,
                   "email": connect_email,
@@ -115,7 +116,12 @@ function connectNow(){
                 request.onload = function () {
                     var data = JSON.parse(this.response);
                     console.log(data);
+                    stopLoader();
                     if(data.message == "Message Sent"){
+                        document.getElementById('connect_name').value = "";
+                        document.getElementById('connect_email').value = "";
+                        document.getElementById('connect_mobile').value = "";
+                        document.getElementById('connect_message').value = "";
                         notify("Thanks! We have received your message.");
                     }
                     else{
@@ -227,11 +233,20 @@ function payNowResponse(razorpay_payment_id, razorpay_order_id, razorpay_signatu
     request.onload = function () {
         var data = JSON.parse(this.response);
         console.log(data);
-        // if (data['message'] == "Order Valid and Successful") {
-        //     notify("Payment successful");
-        //     emptyCart();
-        // } else {
-        //     notify("Payment unsuccessful");
-        // }
+        stopLoader();
+        if (data['message'] == "Payment Successful") {
+            $('#enrollment_modal').modal('hide');
+            document.getElementById('enrollment_name').value = "";
+            document.getElementById('enrollment_email').value = "";
+            document.getElementById('enrollment_mobile').value = "";
+            document.getElementById('enrollment_address').value = "";
+            document.getElementById('enrollment_cweight').value = "";
+            document.getElementById('enrollment_gweight').value = "";
+            document.getElementById('enrollment_height').value = "";
+            document.getElementById('enrollment_age').value = "";
+            notify("Payment successful");
+        } else {
+            notify("Payment unsuccessful");
+        }
     }
 }
