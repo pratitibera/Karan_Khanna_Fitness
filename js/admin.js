@@ -50,6 +50,16 @@ function checkLoginStatus2() {
 		displayContacts();
 		displayTransactions();
 	}
+    // var json = {}
+    // var request = new XMLHttpRequest();
+    // request.open(urlSet.trigger_mail.method, urlSet.trigger_mail.url + '5', true);
+    // request.setRequestHeader("Content-Type", "application/json");
+    // request.setRequestHeader("apiKey", authtoken);
+    // request.send(JSON.stringify(json));
+    // request.onload = function () {
+    //     var data = JSON.parse(this.response);
+    //     console.log(data);
+    // }
 }
 
 function displayContacts() {

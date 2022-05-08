@@ -25,6 +25,10 @@ var urlSet = {
         url: baseUrl + "/api/v1/payment/verifyPayment", 
         method: "PATCH",
     },
+    trigger_mail: { // Verify payment
+        url: baseUrl + "/api/v1/payment/triggerEmail/", 
+        method: "POST",
+    },
 
 
     // Transactions
