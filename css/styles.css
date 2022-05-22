@@ -608,9 +608,14 @@ footer input {
 }
 .modal .close{
 	right: 15px;
-	top: 5px;
+	top: 23px;
 	color: #fff;
 	position: absolute;
 	font-size: 50px;
 	font-weight: 500;
+}
+@media (min-width: 992px){
+	.ml-lg-45 {
+	    margin-left: 2.5rem!important;
+	}
 }

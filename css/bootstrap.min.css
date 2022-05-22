@@ -6428,6 +6428,13 @@ a.close.disabled {
 	}
 }
 
+@media (min-width:757px) {
+	.modal-lg,
+	.modal-xl {
+		max-width: 650px
+	}
+}
+
 @media (min-width:992px) {
 	.modal-lg,
 	.modal-xl {
